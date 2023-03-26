@@ -1,0 +1,263 @@
+//
+* {
+    margin: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+// Colors
+//Primary
+$Light-red: hsl(0, 100%, 67%);
+$Orangey-yellow: hsl(39, 100%, 56%);
+$Green-teal: hsl(166, 100%, 37%);
+$Cobalt-blue: hsl(234, 85%, 45%);
+
+//Primary-faint
+$faint-red: hsla(0, 100%, 67%, 0.085);
+$faint-yellow: hsla(39, 100%, 56%, 0.085);
+$faint-teal: hsla(166, 100%, 37%, 0.085);
+$faint-blue: hsla(234, 85%, 45%, 0.085);
+
+//Gradients
+$Light-slate-blue: hsl(252, 100%, 67%);
+$Light-royal-blue: hsl(241, 81%, 54%);
+$Violet-blue: hsla(256, 72%, 46%, 1);
+$Persian-blue: hsla(241, 72%, 46%, 0);
+
+//Neutral
+$White: hsl(0, 0%, 100%);
+$Pale-blue: hsl(221, 100%, 96%);
+$Light-lavender: hsl(241, 100%, 89%);
+$Dark-gray-blue: hsl(224, 30%, 27%);
+
+body {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    background-color: white;
+    border-radius: 30px;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    max-height: 98vh;
+    align-self: center;
+    margin: auto;
+    box-shadow: 15px 15px 15px $Pale-blue;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.result {
+    background: linear-gradient(to bottom, $Light-slate-blue, $Light-royal-blue);
+    color: $Light-lavender;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    padding: 7% 4%;
+    flex: 1;
+
+    .circle {
+        background: linear-gradient(to bottom, $Violet-blue, $Persian-blue);
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 140px;
+        width: 140px;
+
+        h1 {
+            font-size: 3rem;
+            color: white;
+        }
+
+        p {
+            font-weight: 600;
+        }
+    }
+
+
+    #great {
+        color: white;
+    }
+
+    p {
+        text-align: center;
+        padding: 0 10%;
+        font-size: 15px;
+    }
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    flex: 1;
+    color: $Dark-gray-blue;
+
+    h2 {
+        margin-bottom: 10%;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    div {
+        display: flex;
+    }
+
+    li {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 5%;
+        margin-bottom: 5%;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    img {
+        margin-right: 10%;
+    }
+
+    h3 {
+        margin-right: 10%;
+    }
+
+    .red {
+        background-color: $faint-red;
+        color: $Light-red;
+
+    }
+
+    .yellow {
+        background-color: $faint-yellow;
+        color: $Orangey-yellow;
+    }
+
+    .green {
+        background-color: $faint-teal;
+        color: $Green-teal;
+    }
+
+    .blue {
+        background-color: $faint-blue;
+        color: $Cobalt-blue;
+    }
+
+    .points {
+        color: $Dark-gray-blue;
+        width: 30%;
+    }
+
+    .button {
+        margin-top: 10%;
+        border-radius: 30px;
+        background-color: $Dark-gray-blue;
+        color: white;
+        text-decoration: none;
+        padding: 5% 0;
+        text-align: center;
+    }
+
+    .button:hover {
+        background: linear-gradient(to bottom, $Light-slate-blue, $Light-royal-blue);
+    }
+
+}
+
+
+footer {
+    max-height: 2vh;
+    text-align: center;
+    margin-bottom: 0.5rem;
+
+    p {
+        font-size: 0.5rem;
+        color: $Dark-gray-blue;
+
+        a {
+            font-size: 0.5rem;
+            color: $Dark-gray-blue;
+        }
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+
+    main {
+        background-color: white;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 100vh;
+        align-self: center;
+        width: 100vw;
+        margin-top: 0;
+        box-shadow: none;
+
+
+
+        .result {
+            width: 100vw;
+            border-radius: 0 0 30px 30px;
+
+            .circle {
+                margin: 5%;
+
+                h1 {
+                    color: white;
+                }
+            }
+
+
+            #great {
+                margin-bottom: 5%;
+            }
+
+            p {
+                text-align: center;
+                padding: 0 10%;
+                font-size: 15px;
+            }
+        }
+
+        .summary {
+
+            padding: 7%;
+
+            h2 {
+                font-size: 1rem;
+                margin-bottom: 8%;
+            }
+
+            .button {
+                margin-top: 2%;
+            }
+
+        }
+    }
+
+}
+
+@media screen and (min-width: 701px) {
+    .circle {
+        margin: 15%;
+    }
+
+    #great {
+        margin-bottom: 10%;
+    }
+}
